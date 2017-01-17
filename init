@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sh wp-setup/lib/setup.sh

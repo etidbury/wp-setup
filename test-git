@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+cd "wp-setup/lib"
+source "_config.sh"
+cd "../../"
+
+
+sh ${SETUP_LIB_URI}git-remote-helper.sh ${_currentDirectoryName}
