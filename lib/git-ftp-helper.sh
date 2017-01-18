@@ -16,6 +16,7 @@ else
     git config git-ftp.user ${FTP_USERNAME}
     git config git-ftp.password ${FTP_PASSWORD}
 
+    sh $1
     # Upload all files
 
     # Or if the files are already there

@@ -68,12 +68,6 @@ cp ${BOOTSTRAP_URI}dist/js/bootstrap.min.js ${INIT_SRC_THEME_DIR_URI}js/
 
 
 
-
-
-
-
-
-
 progress "Copying initial source files - Root files..."
 
 cp -a ${INIT_SRC_ROOT_DIR_URI} ${PROJECT_ROOT_URI}
@@ -86,27 +80,22 @@ progress "Copying initial source files - Plugin files..."
 
 cp -a ${INIT_SRC_PLUGINS_DIR_URI} ${PLUGINS_DIR_URI}
 
-
 progress "Removing unwanted files..."
 
-rm -rf ./readme.html # delete readme
+rm -rf ./readme.html # delete WP readme
 
 progress "Updating permissions..."
-
 
 find ${PROJECT_ROOT_URI} -type d -exec chmod 755 {} \;
 find ${PROJECT_ROOT_URI} -type f -exec chmod 644 {} \;
 
 progress "Initiate Github Repository...\n"
 
-echo ${_customDirectoryName}
 
 sh ${SETUP_LIB_URI}git-remote-helper.sh ${_currentDirectoryName}
 
 
 
-exit 1
-###########
 
 
 progress "Opening phpMyAdmin...\n"
